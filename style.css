@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+span{
+    background-color: rgb(190, 106, 106);
+    padding: 2px 10px;
+    border-radius: 8px;
+    color:white
+}
+.header{
+    position: fixed;
+}
+
+li .active{
+    color: white !important;
+    background-color: rgb(190, 106, 106);
+}
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    color: black;
+
+}
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+    background-color: rgb(190, 106, 106);
+    color: white;
+}
+
+.nav-bar ul li a .active:hover {
+    background-color: rgb(234, 234, 234);
+    color: black;
+}
+
+
+/* Banner */
+
+.back-image{
+    background:linear-gradient(rgba(110, 109, 109, 0.341), rgb(0 0 0 / 92%)), url(img/image_1.jpg);
+    width: 100%;
+    height: 900px;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    margin: auto auto;
+    width: 40%;
+    padding: 10px;
+}
+#banner .content h1{
+    color: white;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.content p{
+    color: white;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+#banner .content input{
+    width: 90%;
+    padding: 10px;
+    height: 50px;
+    border: none;
+    margin-right: -50px;
+}
+#banner .content input::placeholder{
+    font-size: 18px !important;
+    vertical-align: middle;
+}
+
+.content input[type="text"]{
+    font-size: 18px;
+}
+
+.bi-search::before{
+    font-size: 25px;
+    vertical-align: middle !important;
+}
+
+.search-icon{
+    border: none;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Images */
+.images{
+    margin-top: 30px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+  }
+  
+  .image-gallery > li {
+    height: 250px;
+    flex: 1 1 auto;  /*shorthand for flex-grow, flex-shrink, flex-basis*/
+  }
+  
+  .image-gallery li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+/* Footer */
+.container {
+    text-align: center;
+    padding: 10px 100px;
+    font-size: 20px;
+
+}
+.footer{
+    margin-top: 20px;
+    background-color: rgb(158, 68, 68);
+    color: white;
+
+}
+
+@media only screen and (max-width:1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width:918px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: rgb(0, 0, 0);
+        margin: 6px 0;
+    }
+
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        height: 450px;
+        background-color: white;
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 10px;
+    }
+
+}
+
+
