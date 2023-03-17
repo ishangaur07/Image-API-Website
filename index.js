@@ -69,3 +69,8 @@ list3.addEventListener("click", function(e){
 	getPhotos(actual);
 })
 getPhotos("normal")
+
+var video = document.querySelectorAll('img');
+video.forEach(play => play.addEventListener('click',()=>{
+	play.classList.toggle('yesOpen');
+}));
