@@ -4,7 +4,6 @@ hamburger.onclick = function () {
 	navbar = document.querySelector(".nav-bar");
 	navbar.classList.toggle("active"); // Toggle is used to add and remove a class name from an element
 }
-var API_KEY = '34367373-7c2f4f77157afb0dc958d6e60';
 
 const getPhotos = (photo) => {
 	var inputID = document.getElementById("search");
