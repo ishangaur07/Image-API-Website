@@ -15,7 +15,7 @@ const getPhotos = (photo) => {
 		return value1.json()
 	}).then((value2) => {
 		for (var index = 0; index < 20; index++) {
-			var url = value2.hits[index].webformatURL;
+			var url = value2.hits[index].largeImageURL;
 			let className = document.querySelector(".images-blocks" + index);
 			className.setAttribute("src", url);
 		}
